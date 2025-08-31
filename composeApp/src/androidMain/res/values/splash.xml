@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style parent="Theme.SplashScreen" name="Theme.SpotifyCMP.splash">
+        <item name="android:windowSplashScreenBackground" tools:ignore="NewApi">#121212</item>
+        <item name="postSplashScreenTheme">@android:style/Theme.Material.Light.NoActionBar</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+    </style>
+</resources>
