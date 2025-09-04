@@ -12,6 +12,7 @@ androidx-testExt = "1.2.1"
 composeMultiplatform = "1.8.2"
 junit = "4.13.2"
 kotlin = "2.2.0"
+navigationCompose = "2.8.0"
 splash = "1.0.1"
 
 [libraries]
@@ -20,6 +21,7 @@ kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.
 junit = { module = "junit:junit", version.ref = "junit" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
 
+navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splash" }
 
 androidx-testExt-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-testExt" }
