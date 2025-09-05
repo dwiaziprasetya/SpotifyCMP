@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.dwiaziprasetya.spotifycmp.presentation.screen.home.HomeScreen
+import com.dwiaziprasetya.spotifycmp.presentation.screen.main.MainScreen
 
 @Composable
 fun AppNavHost() {
@@ -12,10 +13,10 @@ fun AppNavHost() {
 
     NavHost(
         navController = navController,
-        startDestination = Screen.Home
+        startDestination = Screen.MainScreen
     ) {
-        composable<Screen.Home> {
-            HomeScreen()
+        composable<Screen.MainScreen> {
+            MainScreen()
         }
     }
 }

@@ -20,6 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         window.statusBarColor = "#121212".toColorInt()
+        window.navigationBarColor = "#121212".toColorInt()
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
         initializeKoin(
