@@ -9,7 +9,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.graphics.toColorInt
+import com.dwiaziprasetya.spotifycmp.di.initializeKoin
+import org.koin.android.ext.koin.androidContext
 
+@Suppress("DEPRECATION")
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -18,6 +21,12 @@ class MainActivity : ComponentActivity() {
 
         window.statusBarColor = "#121212".toColorInt()
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
+
+        initializeKoin(
+            config = {
+                androidContext(this@MainActivity)
+            }
+        )
 
         setContent {
             App()
