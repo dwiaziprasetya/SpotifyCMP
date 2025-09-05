@@ -1,7 +1,9 @@
 package com.dwiaziprasetya.spotifycmp
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
@@ -16,11 +18,14 @@ import org.koin.android.ext.koin.androidContext
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
-        enableEdgeToEdge()
+        enableEdgeToEdge(
+            navigationBarStyle = SystemBarStyle.light(
+                Color.TRANSPARENT, Color.TRANSPARENT
+            )
+        )
         super.onCreate(savedInstanceState)
 
         window.statusBarColor = "#121212".toColorInt()
-        window.navigationBarColor = "#121212".toColorInt()
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
         initializeKoin(

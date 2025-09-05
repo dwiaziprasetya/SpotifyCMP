@@ -6,7 +6,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -27,8 +29,9 @@ fun BottomBar(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(Color(0xFF121212))
-            .padding(horizontal = 24.dp, vertical = 8.dp),
+            .background(Color.Transparent)
+            .padding(horizontal = 24.dp, vertical = 8.dp)
+            .navigationBarsPadding(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
@@ -49,9 +52,10 @@ fun BottomBar(
                 Text(
                     text = destination.title,
                     color = if (isSelected) Color.White else Color.Gray,
-                    fontSize = 10.sp
+                    fontSize = 12.sp
                 )
             }
         }
     }
 }
+
