@@ -166,10 +166,5 @@ fun RecentRotationItem(title: String, subtitle: String) {
                 fontSize = 12.sp
             )
         }
-        Icon(
-            painter = painterResource(Resources.Icon.create),
-            contentDescription = null,
-            tint = Color.White
-        )
     }
 }
